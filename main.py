@@ -6,11 +6,15 @@ white = ["BTW I use Arch", "Blue switches sound", "Brainfuck", "C++ is a horribl
 
 os.system('clear')
 
-b = int(input("1. {} \n2. {} \n3. {} \nChoose any: ".format(black[0], black[1], black[2])))
+for i in range(len(black)):
+    print("{}. {}".format(i, black[i]))
+b = int(input("Choose one: "))
 os.system('clear')
-print(black[b - 1] + "\n")
+print(black[b] + "\n")
 
-a = int(input("1. {} \n2. {} \n3. {} \nChoose any: ".format(white[0], white[1], white[2])))
+for i in range(len(white)):
+    print("{}. {}".format(i, white[i]))
+a = int(input("Choose one: "))
 os.system('clear')
-time.sleep(3)
-print(black[b - 1] + "\n" + white[a - 1])
+time.sleep(1)
+print(black[b] + "\n" + white[a])
